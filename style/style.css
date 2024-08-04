@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    width: 100dvw;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../assets/background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 100px 10px #c1c1c1;
+
+    /* max-width: 500px; */
+    & .headerForm {
+        font-size: 14px;
+        font-weight: 600;
+        color: #f9f9f9;
+
+        padding: 0.2rem 0.6rem;
+        border-radius: 0.3rem 0.3rem 0rem 0rem;
+
+        background: rgb(34, 126, 195);
+        background: linear-gradient(0deg, rgba(34, 126, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    }
+
+    & .contentForm {
+        font-size: 14px;
+        font-weight: 600;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        background-color: #f9f9f9;
+        padding: 2rem 5rem;
+
+        & input {
+            padding: 0.2rem 0.5rem;
+            outline: none;
+            border: 1px solid #c1c1c1;
+            border-radius: 0.3rem;
+        }
+    }
+
+    & .footerForm {
+        display: flex;
+        justify-content: end;
+        gap: 0.2rem;
+        padding: 0.2rem 0.6rem;
+
+        border-radius: 0rem 0rem 0.3rem 0.3rem;
+        border-top: 3px solid #c1c1c1;
+        background-color: #f9f9f9;
+
+        & button {
+            font-size: 12px;
+            font-weight: 400;
+
+            cursor: pointer;
+
+            padding: 0.2rem 0.6rem;
+            border: 1px solid #c1c1c1;
+            border-radius: 0.3rem;
+
+            transition: 0.3s;
+
+            &:hover {
+                background: rgb(34, 126, 195);
+                background: linear-gradient(0deg, rgba(34, 126, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+                color: #f9f9f9;
+            }
+        }
+    }
+}
+
+.labelForm {
+    display: flex;
+    min-width: 600px;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .char {
+        width: 32%;
+        height: 200px;
+        background-color: #c1c1c163;
+
+        cursor: pointer;
+    }
+}
+
+#titleChar {
+    text-align: center;
+    color: rgb(34, 126, 195);
+}
+
+.cadChar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        width: 300px;
+        height: 400px;
+    }
+
+    #selectJobs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+
+        & button {
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: rgb(34, 126, 195);
+            background: linear-gradient(0deg, rgba(34, 126, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+            color: #f9f9f9;
+
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    #selectStatus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(34, 126, 195);
+
+        h2 {
+            margin-bottom: 50px;
+            margin-top: 8rem;
+        }
+
+        #statusRange {
+            display: flex;
+
+
+
+            #labelRange {
+
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding-top: 5px;
+
+                span {
+                    padding: 0rem 2rem;
+                    text-transform: uppercase;
+
+                }
+            }
+
+            #rangeBar {
+                padding: 0.1rem 0rem;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                input {
+                    width: 60%;
+                }
+
+                span {
+                    display: flex;
+                    gap: 5px;
+
+                    button {
+                        font-size: 12px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        border: none;
+                        background: rgb(34, 126, 195);
+                        background: linear-gradient(0deg, rgba(34, 126, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+                        color: #f9f9f9;
+
+                        transition: 0.3s;
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 1rem 4rem;
+    background-color: #f9f9f9;
+
+    border-radius: 10px;
+    border-bottom: 4px solid #f9f9f9;
+    box-shadow: 0 0 100px 10px #c1c1c1;
+
+    background-color: #00b327;
+    color: #f9f9f9;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    z-index: 1000;
+    /* transition: opacity 0.5s ease; */
+}
+
+.modal.fade-in-out {
+    animation: fadeIn 1.5s forwards;
+}
+
+.modal.error {
+    background-color: #ff0000;
+}
+
+.charCriado:hover{
+    background-color: #929292a1;
+    transition: 0.3s;
+}
+.charCriado img:hover{
+    transition: 0.2s;
+    transform: scale(1.2);
+
+}
+
+@keyframes fadeIn {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+    }
+}
