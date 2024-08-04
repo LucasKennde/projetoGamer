@@ -6,31 +6,31 @@ const jobs = [
         id: 1,
         title: 'Mercenary',
         description: 'Kill people for money',
-        Image: '../assets/jobs/assassin.png'
+        Image: './assets/jobs/assassin.png'
     },
     {
         id: 2,
         title: 'Teacher',
         description: 'Kill people for money',
-        Image: '../assets/jobs/teacher.png'
+        Image: './assets/jobs/teacher.png'
     },
     {
         id: 3,
         title: 'Lord',
         description: 'Kill people for money',
-        Image: '../assets/jobs/lord.png'
+        Image: './assets/jobs/lord.png'
     },
     {
         id: 4,
         title: 'Sniper',
         description: 'Kill people for money',
-        Image: '../assets/jobs/sniper.png'
+        Image: './assets/jobs/sniper.png'
     },
     {
         id: 5,
         title: 'Wizzard',
         description: 'Kill people for money',
-        Image: '../assets/jobs/wizzard.png'
+        Image: './assets/jobs/wizzard.png'
     },
 ]
 
